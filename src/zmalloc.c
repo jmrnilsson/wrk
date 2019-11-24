@@ -55,9 +55,9 @@ void zlibc_free(void *ptr) {
 #define PREFIX_SIZE (0)
 #else
 #if defined(__sun) || defined(__sparc) || defined(__sparc__)
-#define PREFIX_SIZE (ROUNDUP(sizeof(long long), ALIGMENT))
+#define PREFIX_SIZE (ROUND_UP(sizeof(long long), ALIGMENT))
 #else
-#define PREFIX_SIZE (ROUNDUP(sizeof(size_t), ALIGMENT))
+#define PREFIX_SIZE (ROUND_UP(sizeof(size_t), ALIGMENT))
 #endif
 #endif
 
